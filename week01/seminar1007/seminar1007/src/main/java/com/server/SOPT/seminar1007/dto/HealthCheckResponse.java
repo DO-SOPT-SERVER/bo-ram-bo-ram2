@@ -1,5 +1,8 @@
 package com.server.SOPT.seminar1007.dto;
 
+import lombok.Getter;
+
+@Getter
 public class HealthCheckResponse {
     private static final String STATUS ="OK";
     private String status;
