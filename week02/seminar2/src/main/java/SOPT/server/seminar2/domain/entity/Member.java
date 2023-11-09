@@ -28,4 +28,15 @@ public class Member {
         this.age = age;
         this.sopt = sopt;
     }
+    public void updateSOPT(SOPT sopt) {
+        this.sopt = sopt;
+    }
+
+    public void updateMember(String name, String nickname, int age, SOPT sopt) {
+        this.name = name;
+        this.nickname = nickname;
+        this.age = age;
+        this.sopt = sopt;
+    }
+
 }

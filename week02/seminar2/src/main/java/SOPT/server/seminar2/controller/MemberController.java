@@ -1,8 +1,11 @@
 package SOPT.server.seminar2.controller;
 
+
 import SOPT.server.seminar2.dto.request.MemberCreateRequest;
-import SOPT.server.seminar2.dto.response.MemberGetResponse;
 import SOPT.server.seminar2.dto.request.MemberProfileUpdateRequest;
+import SOPT.server.seminar2.dto.request.MemberUpdateRequest;
+import SOPT.server.seminar2.dto.response.MemberDeleteResponse;
+import SOPT.server.seminar2.dto.response.MemberGetResponse;
 import SOPT.server.seminar2.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -22,7 +25,7 @@ public class MemberController {
 
     @GetMapping("/{memberId}")
     public ResponseEntity<MemberGetResponse> getMemberProfileV1(@PathVariable Long memberId) {
-        return ResponseEntity.ok(memberService.getMemberByIdV2(memberId));
+        return ResponseEntity.ok(memberService.getMemberByIdV1(memberId));
     }
 
     @GetMapping(value = "/{memberId}/v2", consumes = "application/json", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -33,7 +36,7 @@ public class MemberController {
     // 생성
     @PostMapping
     public ResponseEntity<Void> createMember(@RequestBody MemberCreateRequest request) {
-        URI location =  URI.create("api/member/" + memberService.create(request)); //api/members 추가
+        URI location =  URI.create(memberService.create(request));
         return ResponseEntity.created(location).build();
     }
 
@@ -43,10 +46,18 @@ public class MemberController {
         return ResponseEntity.ok(memberService.getMembers());
     }
 
-    // 수정
+    // sopt정보만 수정
     @PatchMapping("/{memberId}")
     public ResponseEntity<Void> updateMemberSoptInfo(@PathVariable Long memberId, @RequestBody MemberProfileUpdateRequest request) {
         memberService.updateSOPT(memberId, request);
+        return ResponseEntity.noContent().build();
+    }
+
+    // 멤버정보 수정
+    @PutMapping("/{memberId}")
+    public ResponseEntity<Void> updateMemberInfo(@PathVariable Long memberId,
+                                                 @RequestBody MemberUpdateRequest request) {
+        memberService.updateMember(memberId,request);
         return ResponseEntity.noContent().build();
     }
 
@@ -56,5 +67,6 @@ public class MemberController {
         memberService.deleteMember(memberId);
         return ResponseEntity.noContent().build();
     }
+
 
 }
