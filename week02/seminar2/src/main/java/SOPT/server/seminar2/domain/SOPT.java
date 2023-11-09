@@ -1,4 +1,4 @@
-package SOPT.server.seminar2.entity;
+package SOPT.server.seminar2.domain;
 
 import SOPT.server.seminar2.enums.Part;
 import jakarta.persistence.Embeddable;

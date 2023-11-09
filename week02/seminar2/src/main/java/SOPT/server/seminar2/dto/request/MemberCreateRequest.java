@@ -1,6 +1,5 @@
 package SOPT.server.seminar2.dto.request;
-import SOPT.server.seminar2.entity.SOPT;
-import lombok.Data;
+import SOPT.server.seminar2.domain.SOPT;
 
 
 public record MemberCreateRequest(

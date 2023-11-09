@@ -1,10 +1,9 @@
 package SOPT.server.seminar2.service;
 
 import SOPT.server.seminar2.dto.request.MemberCreateRequest;
-import SOPT.server.seminar2.dto.request.MemberGetResponse;
+import SOPT.server.seminar2.dto.response.MemberGetResponse;
 import SOPT.server.seminar2.dto.request.MemberProfileUpdateRequest;
-import SOPT.server.seminar2.entity.Member;
-import SOPT.server.seminar2.entity.SOPT;
+import SOPT.server.seminar2.domain.entity.Member;
 import SOPT.server.seminar2.repository.MemberJpaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

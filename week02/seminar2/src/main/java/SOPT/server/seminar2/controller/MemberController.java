@@ -1,7 +1,7 @@
 package SOPT.server.seminar2.controller;
 
 import SOPT.server.seminar2.dto.request.MemberCreateRequest;
-import SOPT.server.seminar2.dto.request.MemberGetResponse;
+import SOPT.server.seminar2.dto.response.MemberGetResponse;
 import SOPT.server.seminar2.dto.request.MemberProfileUpdateRequest;
 import SOPT.server.seminar2.service.MemberService;
 import lombok.RequiredArgsConstructor;

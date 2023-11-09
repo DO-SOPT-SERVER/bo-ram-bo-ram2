@@ -1,7 +1,7 @@
-package SOPT.server.seminar2.dto.request;
+package SOPT.server.seminar2.dto.response;
 
-import SOPT.server.seminar2.entity.Member;
-import SOPT.server.seminar2.entity.SOPT;
+import SOPT.server.seminar2.domain.entity.Member;
+import SOPT.server.seminar2.domain.SOPT;
 
 public record MemberGetResponse(
         String name,

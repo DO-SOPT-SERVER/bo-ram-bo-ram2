@@ -1,6 +1,6 @@
 package SOPT.server.seminar2.repository;
 
-import SOPT.server.seminar2.entity.Member;
+import SOPT.server.seminar2.domain.entity.Member;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,5 +1,6 @@
-package SOPT.server.seminar2.entity;
+package SOPT.server.seminar2.domain.entity;
 
+import SOPT.server.seminar2.domain.SOPT;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
