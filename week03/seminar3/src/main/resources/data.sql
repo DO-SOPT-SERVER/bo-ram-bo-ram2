@@ -1,5 +1,5 @@
 INSERT INTO MEMBER(ID, NICKNAME, NAME, AGE, PART, GENERATION)
-VALUES (1, '유난', '최윤한', 36, 'SERVER', 33),
+VALUES (1, '유난', '최윤한', 20, 'SERVER', 33),
        (2, 'DDD', '정준서', 24, 'SERVER', 33),
        (3, '멜로니', '김해린', 26, 'PLAN', 33),
        (4, '티벳여우', '이태희', 25, 'ANDROID', 33);

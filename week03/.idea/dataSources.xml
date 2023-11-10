@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://:3305/sopt_seminar3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="seminar3@localhost" uuid="44f4bf1b-f0e5-4f86-85e7-af54993d2608">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3305/seminar3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

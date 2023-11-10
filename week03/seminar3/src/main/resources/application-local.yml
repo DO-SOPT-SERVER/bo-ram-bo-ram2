@@ -1,17 +1,17 @@
 spring:
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3305/seminar3?useSSL=true&useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3305/seminar3?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: 1234
 
-  config:
-    activate:
-      on-profile: local
+    config:
+      activate:
+        on-profile: local
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
     hibernate:
       ddl-auto: create
     properties:
@@ -19,7 +19,10 @@ spring:
         format_sql: true
         show_sql: true
 
+  defer-datasource-initialization: true
+
 
   sql:
     init:
       mode: always
+

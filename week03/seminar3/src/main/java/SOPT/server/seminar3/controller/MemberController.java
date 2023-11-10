@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/seminar2/api/member")
+@RequestMapping("/api/member")
 @RequiredArgsConstructor
 public class MemberController {
 
